@@ -12,23 +12,24 @@
     <title>salary calculator</title>
 </head>
 
-<body>
+<body class="container">
     <!-- page banner -->
     <h1>salary calculator</h1>
     <main>
         <div>
-            <!-- banner -->
+            <!-- section banner -->
             <h3>add employees</h3>
-            <!-- inputs -->
-            <input id="" type="text" placeholder="firstname">
-            <input id="" type="text" placeholder="last name">
-            <input id="" type="number" placeholder="employee number">
-            <input id="" type="text" placeholder="position">
-            <input id="" type="number" placeholder="annual salary">
+            <!-- inputs and button -->
+            <input id="firstName" type="text" placeholder="first name">
+            <input id="lastName" type="text" placeholder="last name">
+            <input id="employeeNumber" type="number" placeholder="employee number">
+            <input id="employeePosition" type="text" placeholder="position">
+            <input id="employeeSalary" type="number" placeholder="annual salary">
             <button id="addEmployeeButton">add employee</button>
         </div>
-            <h3>list of employees</h3>
-        <table>
+        <!-- section banner -->
+        <h3>list of employees</h3>
+        <table class="table">
             <!-- table -->
             <thead>
                 <tr>
@@ -40,8 +41,9 @@
                     <th>delete</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="employeeList">
                 <!-- body of table -->
+                <!-- collected employee data will be appended here -->
             </tbody>
         </table>
         <div>
