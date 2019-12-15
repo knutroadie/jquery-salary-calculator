@@ -31,7 +31,7 @@ function readyNow() {
             employeePosition: employeePosition,
             employeeSalary: employeeSalary
         }
-
+        
         console.log(firstName, lastName, employeeNumber, employeePosition, employeeSalary);
 
         // append collected input values to table body of the DOM
@@ -53,7 +53,7 @@ function readyNow() {
         $('#employeePosition').val('');
         $('#employeeSalary').val('');
 
-        function makeNewEmployee(firstName, lastName, employeeNumber, employeePosition, employeeSalary) {
+        function makeNewEmployee() {
             console.log('inside makeNewEmployee');
             
             let employee = {};
@@ -62,8 +62,6 @@ function readyNow() {
             employee.number = employeeNumber;
             employee.position = employeePosition;
             employee.employeeSalary
-
-            salaries.push(employee);
         }
         makeNewEmployee();
         
@@ -72,12 +70,14 @@ function readyNow() {
 
         function totalMonthlyBudget() {
             console.log('inside totalMonthlyBudget');
-            
             let monthlyBudget = 0;
-            for (let i = 0; i < employees.length; i++) {
-                monthlyBudget = monthlyBudget + monthlyBudget[i] / 12;
+            for (let i = 0; i < salaries.length; i++) {
+                totalMonthlyBudget = monthlyBudget += monthlyBudget[i] / 12;
             }
-            console.log(monthlyBudget);
+
+            // monthlyBudget = Number(monthlyBudget);
+            return monthlyBudget;
+            // console.log(monthlyBudget);
         }
         totalMonthlyBudget();
     }
