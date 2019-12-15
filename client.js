@@ -7,17 +7,17 @@ function readyNow() {
     // click to run addEmployee
     $('#addEmployeeButton').on('click', addEmployee);
     // click to run removeEmployee
-    $('#employeeList').on('click', '.deletbutton', removeEmployee);
+    $('#employeeList').on('click', '.deleteButton', removeEmployee);
 
     // add employee function
     function addEmployee() {
         console.log('addEmployeeButton clicked');
         // get user input
-        let firstName = $('#firstName').valueOf();
-        let lastName = $('#lastName').valueOf();
-        let employeeNumber = $('#number').valueOf();
-        let employeePosition = $('#position').valueOf();
-        let employeeSalary = $('#salary').valueOf();
+        let firstName = $('#firstName').val();
+        let lastName = $('#lastName').val();
+        let employeeNumber = $('#employeeNumber').val();
+        let employeePosition = $('#employeePosition').val();
+        let employeeSalary = $('#employeeSalary').val();
         // convert strings to number values
         employeeNumber = Number(employeeNumber);
         employeeSalary = Number(employeeSalary);
@@ -32,16 +32,16 @@ function readyNow() {
             <td>${employeeNumber}</td>
             <td>${employeePosition}</td>
             <td>${employeeSalary}</td>
-            <td><button>delete?</button></td>
+            <td><button class="deleteButton">delete?</button></td>
         </tr>
         `);
 
         // empty inputs on the DOM using setter
-        $('#firstName').valueOf('');
-        $('#lastName').valueOf('');
-        $('#emploeeNumber').valueOf('');
-        $('#employeePosition').valueOf('');
-        $('#employeeSalary').valueOf('');
+        $('#firstName').val('');
+        $('#lastName').val('');
+        $('#emploeeNumber').val('');
+        $('#employeePosition').val('');
+        $('#employeeSalary').val('');
 
     }
 
@@ -50,6 +50,4 @@ function readyNow() {
         console.log('in removeEmployee function');
         $(this).closest('tr').remove();
     }
-
-
 }
