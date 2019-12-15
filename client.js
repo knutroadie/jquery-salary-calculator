@@ -5,7 +5,7 @@ $(document).ready(readyNow)
 function readyNow() {
     console.log('jq');
     // click to run addEmployee
-    $('#addEmployeeButton').on('click, addEmployee');
+    $('#addEmployeeButton').on('click', addEmployee);
     // click to run removeEmployee
     $('#employeeList').on('click', '.deletbutton', removeEmployee);
 
@@ -13,7 +13,7 @@ function readyNow() {
     function addEmployee() {
         console.log('addEmployeeButton clicked');
         // get user input
-        let firstname = $('#firstName').valueOf();
+        let firstName = $('#firstName').valueOf();
         let lastName = $('#lastName').valueOf();
         let employeeNumber = $('#number').valueOf();
         let employeePosition = $('#position').valueOf();
@@ -35,7 +35,7 @@ function readyNow() {
             <td><button>delete?</button></td>
         </tr>
         `);
-        
+
         // empty inputs on the DOM using setter
         $('#firstName').valueOf('');
         $('#lastName').valueOf('');
@@ -50,4 +50,6 @@ function readyNow() {
         console.log('in removeEmployee function');
         $(this).closest('tr').remove();
     }
+
+
 }
