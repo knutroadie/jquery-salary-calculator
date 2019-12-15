@@ -2,6 +2,8 @@ console.log('js');
 
 $(document).ready(readyNow)
 
+let salaries = [];
+
 function readyNow() {
     console.log('jq');
     // click to run addEmployee
@@ -21,6 +23,16 @@ function readyNow() {
         // convert strings to number values
         employeeNumber = Number(employeeNumber);
         employeeSalary = Number(employeeSalary);
+
+        let employee = {
+            firstName: firstName,
+            lastName: lastName,
+            employeeNumber: employeeNumber,
+            employeePosition: employeePosition,
+            employeeSalary: employeeSalary
+        }
+
+        
 
         console.log(firstName, lastName, employeeNumber, employeePosition, employeeSalary);
 
@@ -43,6 +55,20 @@ function readyNow() {
         $('#employeePosition').val('');
         $('#employeeSalary').val('');
 
+        function makeNewEmployee(firstName, lastName, employeeNumber, employeePosition, employeeSalary) {
+            let employee = {};
+            employee.firstName = firstName;
+            employee.lastName = lastName;
+            employee.number = employeeNumber;
+            employee.position = employeePosition;
+            employee.employeeSalary
+
+            salaries.push(employee);
+        }
+
+        salaries.push(employee.employeeSalary);
+        console.log(salaries);
+        
     }
 
     // remove employee function
@@ -51,3 +77,11 @@ function readyNow() {
         $(this).closest('tr').remove();
     }
 }
+
+// salaries.push(employee.employeeSalary);
+
+// loop through the user-generated Array
+// collect the annualSalary key:value of each array index
+// add the collected values
+// append the sum to the DOM
+// if statement the color of the value to turn red when over 20000 by assigning it a unique class
