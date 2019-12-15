@@ -13,13 +13,13 @@ function readyNow() {
 
     // add employee function
     function addEmployee() {
-        // console.log('addEmployeeButton clicked');
         // get user input
         let firstName = $('#firstName').val();
         let lastName = $('#lastName').val();
         let employeeNumber = $('#employeeNumber').val();
         let employeePosition = $('#employeePosition').val();
         let employeeSalary = $('#employeeSalary').val();
+
         // convert strings to number values
         employeeNumber = Number(employeeNumber);
         employeeSalary = Number(employeeSalary);
@@ -79,6 +79,11 @@ function readyNow() {
                 monthlyBudget += salaries[i] / 12;
                 console.log(monthlyBudget);
             }
+            if (monthlyBudget < 20000) {
+                $('#budgetOutput').append(`<h1>math.round(${monthlyBudget}</h1>`);
+            } else {
+                $('#budgetOutput').append(`<h1 id="overBudget">${monthlyBudget}</h1>`);
+            }
             return monthlyBudget;
         }
         totalMonthlyBudget();
@@ -91,6 +96,7 @@ function readyNow() {
     }
 }
 
-// append the sum to the DOM
 // remove employee salaries from the array when they are removed
-// if statement the color of the value to turn red when over 20000 by assigning it a unique class
+// display monthly budget inline
+// round to whole number (interger)
+// bankruptcy button over 50000
