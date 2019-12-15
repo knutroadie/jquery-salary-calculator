@@ -39,7 +39,7 @@ function readyNow() {
         // empty inputs on the DOM using setter
         $('#firstName').val('');
         $('#lastName').val('');
-        $('#emploeeNumber').val('');
+        $('#employeeNumber').val('');
         $('#employeePosition').val('');
         $('#employeeSalary').val('');
 
