@@ -53,6 +53,7 @@ function readyNow() {
         $('#employeePosition').val('');
         $('#employeeSalary').val('');
 
+        // create new employee objects
         function makeNewEmployee() {            
             let employee = {};
             employee.firstName = firstName;
@@ -63,8 +64,12 @@ function readyNow() {
         }
         makeNewEmployee();
         
+        // push the salaries into an array
+
         salaries.push(employee.employeeSalary);
         console.log(salaries);
+
+        // calculate the MONTHLY budget
 
         function totalMonthlyBudget() {
             console.log('inside totalMonthlyBudget');
@@ -86,7 +91,6 @@ function readyNow() {
     }
 }
 
-// loop through the user-generated Array
-// add the collected values and divide them by 12 to achieve monthly budget
 // append the sum to the DOM
+// remove employee salaries from the array when they are removed
 // if statement the color of the value to turn red when over 20000 by assigning it a unique class
