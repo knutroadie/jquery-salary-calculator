@@ -13,7 +13,7 @@ function readyNow() {
 
     // add employee function
     function addEmployee() {
-        console.log('addEmployeeButton clicked');
+        // console.log('addEmployeeButton clicked');
         // get user input
         let firstName = $('#firstName').val();
         let lastName = $('#lastName').val();
@@ -53,9 +53,7 @@ function readyNow() {
         $('#employeePosition').val('');
         $('#employeeSalary').val('');
 
-        function makeNewEmployee() {
-            console.log('inside makeNewEmployee');
-            
+        function makeNewEmployee() {            
             let employee = {};
             employee.firstName = firstName;
             employee.lastName = lastName;
@@ -71,13 +69,12 @@ function readyNow() {
         function totalMonthlyBudget() {
             console.log('inside totalMonthlyBudget');
             let monthlyBudget = 0;
+            console.log(monthlyBudget);
             for (let i = 0; i < salaries.length; i++) {
-                totalMonthlyBudget = monthlyBudget += monthlyBudget[i] / 12;
+                monthlyBudget += salaries[i] / 12;
+                console.log(monthlyBudget);
             }
-
-            // monthlyBudget = Number(monthlyBudget);
             return monthlyBudget;
-            // console.log(monthlyBudget);
         }
         totalMonthlyBudget();
     }
