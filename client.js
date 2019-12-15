@@ -32,8 +32,6 @@ function readyNow() {
             employeeSalary: employeeSalary
         }
 
-        
-
         console.log(firstName, lastName, employeeNumber, employeePosition, employeeSalary);
 
         // append collected input values to table body of the DOM
@@ -56,6 +54,8 @@ function readyNow() {
         $('#employeeSalary').val('');
 
         function makeNewEmployee(firstName, lastName, employeeNumber, employeePosition, employeeSalary) {
+            console.log('inside makeNewEmployee');
+            
             let employee = {};
             employee.firstName = firstName;
             employee.lastName = lastName;
@@ -65,10 +65,21 @@ function readyNow() {
 
             salaries.push(employee);
         }
-
+        makeNewEmployee();
+        
         salaries.push(employee.employeeSalary);
         console.log(salaries);
-        
+
+        function totalMonthlyBudget() {
+            console.log('inside totalMonthlyBudget');
+            
+            let monthlyBudget = 0;
+            for (let i = 0; i < employees.length; i++) {
+                monthlyBudget = monthlyBudget + monthlyBudget[i] / 12;
+            }
+            console.log(monthlyBudget);
+        }
+        totalMonthlyBudget();
     }
 
     // remove employee function
@@ -78,10 +89,7 @@ function readyNow() {
     }
 }
 
-// salaries.push(employee.employeeSalary);
-
 // loop through the user-generated Array
-// collect the annualSalary key:value of each array index
-// add the collected values
+// add the collected values and divide them by 12 to achieve monthly budget
 // append the sum to the DOM
 // if statement the color of the value to turn red when over 20000 by assigning it a unique class
