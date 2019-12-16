@@ -80,7 +80,7 @@ function readyNow() {
                 console.log(monthlyBudget);
             }
             if (monthlyBudget < 20000) {
-                $('#budgetOutput').append(`<h1>math.round(${monthlyBudget}</h1>`);
+                $('#budgetOutput').append(`<h1>${monthlyBudget}</h1>`);
             } else {
                 $('#budgetOutput').append(`<h1 id="overBudget">${monthlyBudget}</h1>`);
             }
@@ -93,10 +93,11 @@ function readyNow() {
     function removeEmployee() {
         console.log('in removeEmployee function');
         $(this).closest('tr').remove();
+        $('#budgetOutput').remove(salaries.employeeSalary, totalMonthlyBudget);
     }
 }
 
-// remove employee salaries from the array when they are removed
+// remove employee salaries from the array when the delete employee button is clicked
 // display monthly budget inline
 // round to whole number (interger)
 // bankruptcy button over 50000

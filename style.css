@@ -1,4 +1,5 @@
 #overBudget {
+    display: inline-block;
     color: white;
     background-color: red;
 }
