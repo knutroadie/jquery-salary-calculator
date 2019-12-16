@@ -10,6 +10,8 @@ function readyNow() {
     $('#addEmployeeButton').on('click', addEmployee);
     // click to run removeEmployee
     $('#employeeList').on('click', '.deleteButton', removeEmployee);
+    // FILE BANKRUPTCY
+    // $('#bankruptcy').on('click', fileBankruptcy);
 
     // add employee function
     function addEmployee() {
@@ -42,7 +44,7 @@ function readyNow() {
             <td>${employeeNumber}</td>
             <td>${employeePosition}</td>
             <td>${employeeSalary}</td>
-            <td><button class="deleteButton">delete?</button></td>
+            <td><button class="deleteButton btn btn-primary">delete?</button></td>
         </tr>
         `);
 
@@ -69,7 +71,7 @@ function readyNow() {
         salaries.push(employee.employeeSalary);
         console.log(salaries);
 
-        // calculate the MONTHLY budget
+        // calculate the MONTHLY budget, round to nearest whole number
 
         function totalMonthlyBudget() {
             let monthlyBudget = 0;
@@ -78,11 +80,14 @@ function readyNow() {
                 monthlyBudget += salaries[i] / 12;
                 monthlyBudget = Math.round(monthlyBudget);
                 console.log(monthlyBudget);
+                // append budget to DOM
             }
             if (monthlyBudget < 20000) {
                 $('#budgetOutput').append(`<h1>${monthlyBudget}</h1>`);
+                // change display if over alloted budget
             } else {
                 $('#budgetOutput').append(`<h1 id="overBudget">${monthlyBudget}</h1>`);
+                $('.bankruptcy').append(`<button id="bankruptcy" class="btn btn-outline-danger">file bankruptcy</button>`);
             }
             return monthlyBudget;
         }
@@ -98,6 +103,4 @@ function readyNow() {
 }
 
 // remove employee salaries from the array when the delete employee button is clicked
-// display monthly budget inline
-// round to whole number (interger)
-// bankruptcy button over 50000
+// fileBankruptcy button over 50000
