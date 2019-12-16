@@ -72,11 +72,11 @@ function readyNow() {
         // calculate the MONTHLY budget
 
         function totalMonthlyBudget() {
-            console.log('inside totalMonthlyBudget');
             let monthlyBudget = 0;
             console.log(monthlyBudget);
             for (let i = 0; i < salaries.length; i++) {
                 monthlyBudget += salaries[i] / 12;
+                monthlyBudget = Math.round(monthlyBudget);
                 console.log(monthlyBudget);
             }
             if (monthlyBudget < 20000) {
@@ -93,7 +93,7 @@ function readyNow() {
     function removeEmployee() {
         console.log('in removeEmployee function');
         $(this).closest('tr').remove();
-        $('#budgetOutput').remove(salaries.employeeSalary, totalMonthlyBudget);
+        // $('#budgetOutput').remove(salaries.employeeSalary, totalMonthlyBudget);
     }
 }
 
