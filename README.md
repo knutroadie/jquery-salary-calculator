@@ -1,9 +1,17 @@
-# Project Name
+# monthly budget salary calculator (m.b.s.c)
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+m.b.s.c. allows users to calculate their monthly salary budget.
 
-## Description
+## description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+m.b.s.c. is a project that allows a user to input employee data on the DOM, display a table of entered employees, then calculate the monthly salary budget. When over $20000 monthly, the total budget will be displayed in red. Functionality allows employees to be removed from the employee list, and if the budget climbs over $50000 monthly, a new FILE BANKRUPTCY button will appear, allowing the user to banish their entries to another dimension.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/github-finalization-assignment).
+### copyright
+
+creative commons 3.0, created by luke rohde, 2019
+You are free to:
+Share — copy and redistribute the material in any medium or format
+Adapt — remix, transform, and build upon the material
+for any purpose, even commercially.
+This license is acceptable for Free Cultural Works.
+The licensor cannot revoke these freedoms as long as you follow the license terms.

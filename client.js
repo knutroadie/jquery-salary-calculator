@@ -78,6 +78,7 @@ function readyNow() {
             console.log(monthlyBudget);
             for (let i = 0; i < salaries.length; i++) {
                 monthlyBudget += salaries[i] / 12;
+                $('#budgetOutput').empty();
                 monthlyBudget = Math.round(monthlyBudget);
                 console.log(monthlyBudget);
                 // append budget to DOM
@@ -89,6 +90,15 @@ function readyNow() {
                 $('#budgetOutput').append(`<h1 id="overBudget">${monthlyBudget}</h1>`);
                 $('.bankruptcy').append(`<button id="bankruptcy" class="btn btn-outline-danger">file bankruptcy</button>`);
             }
+
+            // if (condition) {
+                
+            // } if (condition) {
+                
+            // } else {
+
+            // }
+
             return monthlyBudget;
         }
         totalMonthlyBudget();
